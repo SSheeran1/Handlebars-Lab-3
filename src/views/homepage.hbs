@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignments</title>
+  </head>
+  <body>
+    <h1>Assignments</h1>
+    <table>
+      <tr>
+        <th>Assignment</th>
+        <th>Score</th>
+        <th>Total</th>
+        <th>Completed</th>
+        <th>Actions</th>
+      </tr>
+      {{#each assignments}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{score}}</td>
+          <td>{{total}}</td>
+          <td>{{#if completed}}
+              <p>✓</p>
+            {{/if}}</td>
+          <td>
+            <a href="/grades/{{id}}/delete">Delete</a>
+            <a href="/grades/{{id}}/edit">Edit</a>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+    <p>Overall Average: {{average}}%</p>
+    <a href="/grades/add">Add an Assignment</a>
+  </body>
+</html>

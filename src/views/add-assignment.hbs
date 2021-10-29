@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Assignment</title>
+  </head>
+  <body>
+    <h1>Add an Assignment</h1>
+    <form action="/grades/add-submit" method="POST">
+      <label for="name">Assignment Name</label>
+      <input type="text" name="name" id="name" />
+      <label for="score">Your Score</label>
+      <input type="number" name="score" id="score" />
+      <label for="total">Total Possible Score</label>
+      <input type="number" name="total" id="total" />
+      <input type="checkbox" name="completed" id="completed" />
+      <label for="completed">Have you completed this assignment?</label>
+      <button>Add</button>
+      <a href="/">Nevermind</a>
+    </form>
+  </body>
+</html>
